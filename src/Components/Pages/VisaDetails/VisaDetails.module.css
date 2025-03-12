@@ -1,0 +1,73 @@
+.visaDetailsTitle {
+  @apply text-4xl text-center font-bold mb-8 bg-clip-text text-transparent bg-gradient-to-r from-primary to-primary-dark;
+}
+
+.visaCard {
+  @apply shadow-lg rounded-xl overflow-hidden transition-all duration-300 hover:shadow-xl;
+}
+
+.bannerImage {
+  @apply w-full h-full object-cover transition-transform duration-500 hover:scale-105;
+}
+
+.bannerOverlay {
+  @apply absolute inset-0 bg-gradient-to-t from-black/70 via-black/40 to-transparent;
+}
+
+.infoCard {
+  @apply p-4 rounded-lg transition-all duration-300 hover:shadow-md;
+}
+
+.infoIcon {
+  @apply text-2xl text-primary transform transition-transform group-hover:scale-110;
+}
+
+.infoTitle {
+  @apply font-semibold;
+}
+
+.infoContent {
+  @apply ml-9 text-gray-600 dark:text-gray-300;
+}
+
+.documentList {
+  @apply ml-9 space-y-2;
+}
+
+.documentItem {
+  @apply flex items-center gap-2 transition-transform duration-200 hover:translate-x-1;
+}
+
+.documentBullet {
+  @apply w-1.5 h-1.5 rounded-full bg-primary;
+}
+
+.applyButton {
+  @apply px-8 py-3 rounded-lg font-medium bg-primary text-white hover:bg-primary-dark transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl;
+}
+
+.modalBackdrop {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm flex items-center justify-center p-4 z-50;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modalContent {
+  @apply w-full max-w-xl rounded-xl shadow-lg p-8 relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

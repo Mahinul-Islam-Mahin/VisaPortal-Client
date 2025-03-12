@@ -1,0 +1,104 @@
+.visa-details-title {
+  @apply text-4xl text-center font-bold mb-8;
+  background: linear-gradient(to right, var(--primary-color), var(--primary-dark));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.visa-card {
+  @apply shadow-lg rounded-xl overflow-hidden transition-all duration-300;
+}
+
+.visa-card:hover {
+  @apply shadow-xl;
+}
+
+.banner-image {
+  @apply w-full h-full object-cover transition-transform duration-500;
+}
+
+.banner-image:hover {
+  transform: scale(1.05);
+}
+
+.banner-overlay {
+  @apply absolute inset-0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7), rgba(0,0,0,0.4), transparent);
+}
+
+.info-card {
+  @apply p-4 rounded-lg transition-all duration-300;
+}
+
+.info-card:hover {
+  @apply shadow-md;
+}
+
+.info-card-icon {
+  @apply text-2xl transition-transform duration-300;
+  color: var(--primary-color);
+}
+
+.info-card:hover .info-card-icon {
+  transform: scale(1.1);
+}
+
+.info-card-title {
+  @apply font-semibold mb-2;
+}
+
+.info-card-content {
+  @apply ml-9 text-gray-600 dark:text-gray-300;
+}
+
+.document-list-item {
+  @apply flex items-center gap-2 transition-all duration-200;
+}
+
+.document-list-item:hover {
+  transform: translateX(4px);
+}
+
+.document-bullet {
+  @apply w-1.5 h-1.5 rounded-full;
+  background-color: var(--primary-color);
+}
+
+.apply-button {
+  @apply px-8 py-3 rounded-lg font-medium text-white shadow-lg 
+         transition-all duration-300;
+  background-color: var(--primary-color);
+}
+
+.apply-button:hover {
+  background-color: var(--primary-dark);
+  transform: scale(1.02);
+  @apply shadow-xl;
+}
+
+.modal-backdrop {
+  @apply fixed inset-0 bg-black/50 backdrop-blur-sm 
+         flex items-center justify-center p-4 z-50;
+  animation: fadeIn 0.3s ease-out;
+}
+
+.modal-content {
+  @apply w-full max-w-xl rounded-xl shadow-lg p-6 relative;
+  animation: slideUp 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to { 
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

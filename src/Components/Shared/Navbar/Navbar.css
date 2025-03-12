@@ -1,0 +1,17 @@
+a.active {
+  text-decoration: none;
+  position: relative;
+}
+
+a.active::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 3px;
+  background-image: linear-gradient(to right, red, #387478);
+  margin-top: 10px;
+  border-radius: 2px;
+  font-weight: 700;
+}
